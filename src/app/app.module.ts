@@ -6,7 +6,7 @@ import { FlexLayoutModule } from '@angular/flex-layout'
 import { MaterialModule } from './material/material.module'
 import { AppRoutingModule } from './app-routing.module'
 import { SharedModule } from './shared/shared.module'
-import { DocumentModule } from './pages/document/document.module'
+import { DocumentModule } from './document/document.module'
 import { AppComponent } from './app.component'
 
 @NgModule({
