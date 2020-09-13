@@ -1,4 +1,18 @@
-<mat-toolbar color="primary">
-    <button mat-button>Perdí</button>
-    <a routerLink="/document/create" mat-button>Encontré</a>
+<mat-toolbar 
+    color="primary"
+    fxLayout="row" 
+    fxLayoutAlign="space-around center">
+    
+        <button mat-button>
+            Perdí
+        </button>
+        
+        <a routerLink="/" mat-fab color="accent" aria-label="Home">
+            <mat-icon>home</mat-icon>
+        </a>
+        
+        <a routerLink="/document/create" mat-button>
+            Encontré
+        </a>
+
 </mat-toolbar>
