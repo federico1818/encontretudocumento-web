@@ -7,6 +7,7 @@ import { MaterialModule } from './material/material.module'
 import { AppRoutingModule } from './app-routing.module'
 import { SharedModule } from './shared/shared.module'
 import { DocumentModule } from './document/document.module'
+import { PostModule } from './post/post.module'
 import { AppComponent } from './app.component'
 
 @NgModule({
@@ -20,6 +21,7 @@ import { AppComponent } from './app.component'
         SharedModule,
         AppRoutingModule,
         DocumentModule,
+        PostModule,
         BrowserAnimationsModule
     ],
     providers: [],
