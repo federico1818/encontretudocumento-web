@@ -1,0 +1,9 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+    <label>
+        Número:
+        <input type="number" formControlName="number">
+    </label>
+
+    <button type="submit">Enviar</button>
+</form>
