@@ -1,19 +1,10 @@
-<mat-expansion-panel>
+<mat-expansion-panel *ngFor="let post of posts | async">
     <mat-expansion-panel-header>
-      This is the expansion title
+        <div>{{ post.type }}</div>
+        <div>{{ post.number }}</div>
     </mat-expansion-panel-header>
   
     <ng-template matExpansionPanelContent>
-      Some deferred content
-    </ng-template>
-</mat-expansion-panel>
-
-<mat-expansion-panel>
-    <mat-expansion-panel-header>
-      This is the expansion title
-    </mat-expansion-panel-header>
-  
-    <ng-template matExpansionPanelContent>
-      Some deferred content
+        Some deferred content
     </ng-template>
 </mat-expansion-panel>
