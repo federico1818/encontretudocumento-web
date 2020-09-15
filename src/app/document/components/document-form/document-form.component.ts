@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core'
 import { FormBuilder, Validators } from '@angular/forms'
 
+import { Post } from 'src/app/core/post'
+import { PostService } from 'src/app/post/services/post.service'
+
 @Component({
     selector: 'app-document-form',
     templateUrl: './document-form.component.html',
@@ -13,14 +16,20 @@ export class DocumentFormComponent implements OnInit {
     })
     
     constructor(
-        protected fb: FormBuilder
+        protected fb: FormBuilder,
+        protected postService: PostService
     ) {}
 
     ngOnInit(): void {
     }
 
     public onSubmit(): void {
-        console.log('Submit')
+        if(this.form.valid)
+            this.send()
+    }
+
+    public send(): void {
+        this.postService.save(new Post)
     }
 
 }

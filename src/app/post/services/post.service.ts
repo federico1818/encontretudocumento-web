@@ -19,4 +19,10 @@ export class PostService {
         p.type = 'DNI'
         this._posts.next([p, p, p, p])
     }
+
+    public save(post: Post): void {
+        let posts: Post[] = this._posts.getValue()
+        posts.unshift(post)
+        this._posts.next(posts)
+    }
 }
