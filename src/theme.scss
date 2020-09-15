@@ -1,4 +1,6 @@
 @import '~@angular/material/theming';
+@import './assets/material/mat-expansion-panel';
+
 @include mat-core();
 
 $primary: (
@@ -38,3 +40,4 @@ $app-theme: mat-light-theme((
 ));
 
 @include angular-material-theme($app-theme);
+@include mat-expansion-panel($app-theme);

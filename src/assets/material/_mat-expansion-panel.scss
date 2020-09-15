@@ -1,0 +1,13 @@
+@mixin mat-expansion-panel($theme) {
+    $config: mat-get-color-config($theme);
+    $primary: map-get($config, primary);
+    
+    .mat-expansion-panel:not([class*="mat-elevation-z"]) {
+        box-shadow: none;
+        border: 1px solid mat-color($primary, lighter);
+    }
+    
+    .mat-expansion-panel:not(.mat-expanded) .mat-expansion-panel-header:hover:not([aria-disabled="true"]) {
+        background-color: mat-color($primary, lighter);
+    }
+}

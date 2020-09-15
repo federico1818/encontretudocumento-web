@@ -8,7 +8,8 @@ import { FormBuilder, Validators } from '@angular/forms'
 })
 export class DocumentFormComponent implements OnInit {
     public form = this.fb.group({
-        number: ['', [Validators.required]]
+        number: ['', [Validators.required]],
+        name: ['', [Validators.required]]
     })
     
     constructor(
