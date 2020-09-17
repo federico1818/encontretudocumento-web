@@ -1,4 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+    box-sizing: border-box;
+}
 
 html, 
 body { 
@@ -15,6 +18,6 @@ a {
     color: inherit;
 }
 
-.container {
-    padding: 16px;
+img {
+    max-width: 100%;
 }

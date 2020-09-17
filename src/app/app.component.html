@@ -1,1 +1,11 @@
-<router-outlet></router-outlet>
+<div
+    class="app fullscreen"
+    gdAreas="router | footer"
+    gdRows="1fr auto">
+    
+    <div gdArea="router">
+        <router-outlet></router-outlet>
+    </div>
+    
+    <app-footer gdArea="footer"></app-footer>
+</div>

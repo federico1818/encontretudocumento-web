@@ -3,6 +3,7 @@
     $primary: map-get($config, primary);
 
     .bg-primary {
-        background-color: mat-color($primary);;
+        color: mat-color($primary, 'main-contrast');
+        background-color: mat-color($primary);
     }
 }

@@ -1,6 +1,15 @@
 @mixin app($theme) {
     .fullscreen {
+        padding: 8px;
+        height: 100%;
+    }
+
+    .container {
         padding: 16px;
-        height: calc(100% - 32px);
+    }
+
+    .page {
+        height: 100%;
+        border-radius: 8px;
     }
 }
