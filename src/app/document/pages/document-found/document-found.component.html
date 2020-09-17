@@ -9,7 +9,12 @@
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora totam facilis animi inventore voluptatem doloribus incidunt labore rem quo alias, dolorum quod obcaecati. Dicta repellat nulla, laudantium voluptas porro voluptatum?
     </p>
 
-    <a routerLink="/" mat-icon-button aria-label="Back">
-        <mat-icon>arrow_back_ios</mat-icon>
-    </a>
+    <div fxLayout="row" fxLayoutAlign="space-between center">
+        <a routerLink="/" mat-button aria-label="Back">
+            Volver
+        </a>
+        <a routerLink="/document/create" mat-flat-button aria-label="Next">
+            Avanzar
+        </a>
+    </div>
 </div>
