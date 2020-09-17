@@ -1,6 +1,7 @@
 @import '~@angular/material/theming';
 @import './assets/scss/material/mat-expansion-panel';
 @import './assets/scss/material/mat-form-field';
+@import './assets/scss/material/mat-toolbar';
 
 @include mat-core();
 
@@ -43,3 +44,4 @@ $app-theme: mat-light-theme((
 @include angular-material-theme($app-theme);
 @include mat-expansion-panel($app-theme);
 @include mat-form-field($app-theme);
+@include mat-toolbar($app-theme);

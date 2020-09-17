@@ -1,0 +1,9 @@
+@mixin mat-toolbar($theme) {
+    $config: mat-get-color-config($theme);
+    $primary: map-get($config, primary);
+
+    .mat-toolbar {
+        background-color: transparent;
+        color: mat-color($primary, darker);
+    }
+}
