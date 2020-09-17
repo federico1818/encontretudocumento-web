@@ -6,7 +6,8 @@ import { MatButtonModule } from '@angular/material/button'
 import { MatExpansionModule } from '@angular/material/expansion'
 import { MatIconModule } from '@angular/material/icon'
 import { MatFormFieldModule } from '@angular/material/form-field' 
-import { MatInputModule } from '@angular/material/input' 
+import { MatInputModule } from '@angular/material/input'
+import { MatStepperModule } from '@angular/material/stepper' 
 
 @NgModule({
     declarations: [],
@@ -18,6 +19,7 @@ import { MatInputModule } from '@angular/material/input'
         MatIconModule,
         MatFormFieldModule,
         MatInputModule,
+        MatStepperModule
     ],
     exports: [
         MatToolbarModule,
@@ -25,7 +27,8 @@ import { MatInputModule } from '@angular/material/input'
         MatExpansionModule,
         MatIconModule,
         MatInputModule,
-        MatFormFieldModule
+        MatFormFieldModule,
+        MatStepperModule
     ]
 })
 

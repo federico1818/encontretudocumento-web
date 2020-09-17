@@ -1,15 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core'
+import { FormBuilder, Validators } from '@angular/forms'
 
 @Component({
-  selector: 'app-document-create',
-  templateUrl: './document-create.component.html',
-  styleUrls: ['./document-create.component.scss']
+    selector: 'app-document-create',
+    templateUrl: './document-create.component.html',
+    styleUrls: ['./document-create.component.scss']
 })
 export class DocumentCreateComponent implements OnInit {
+    public documentTypeForm = this.fb.group({
+        number: ['', [Validators.required]]
+    })
 
-  constructor() { }
+    constructor(
+        protected fb: FormBuilder
+    ) {}
 
-  ngOnInit(): void {
-  }
+    ngOnInit(): void {
+    }
 
 }

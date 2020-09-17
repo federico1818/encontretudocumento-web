@@ -1,1 +1,24 @@
-<app-document-form></app-document-form>
+<mat-horizontal-stepper linear>
+    <mat-step [stepControl]="documentTypeForm">
+        <h2>¿Encontraste un documento?</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum doloremque quod accusantium aut placeat beatae et perferendis totam dolorem ipsum nam libero, ratione, suscipit deleniti iure sint dignissimos magni omnis?
+        </p>
+        <form [formGroup]="documentTypeForm">
+            <mat-form-field appearance="outline">
+                <mat-label>Número</mat-label>
+                <input matInput type="text" formControlName="number">
+                <mat-error *ngIf="documentTypeForm.controls.number.hasError('required')">El número es obligatorio</mat-error>
+            </mat-form-field>
+            <div>
+                <button mat-button matStepperNext color="accent">Siguiente</button>
+            </div>
+        </form>
+    </mat-step>
+    <mat-step>
+        <p>You are now done.</p>
+        <div>
+            <button mat-button matStepperPrevious>Back</button>
+        </div>
+    </mat-step>
+</mat-horizontal-stepper>
