@@ -4,6 +4,7 @@
 @import './assets/scss/utils/text';
 @import './assets/scss/material/mat-expansion-panel';
 @import './assets/scss/material/mat-form-field';
+@import './assets/scss/material/mat-horizontal-stepper';
 @import './assets/scss/material/mat-toolbar';
 
 @include mat-core();
@@ -50,4 +51,5 @@ $app-theme: mat-light-theme((
 @include text($app-theme);
 @include mat-expansion-panel($app-theme);
 @include mat-form-field($app-theme);
+@include mat-horizontal-stepper($app-theme);
 @include mat-toolbar($app-theme);
