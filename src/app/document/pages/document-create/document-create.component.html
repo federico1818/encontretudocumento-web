@@ -3,8 +3,8 @@
         <mat-step [stepControl]="documentTypeForm">
             <h2>Ingresa los datos del documento</h2>
             <p>
-                Por favor, ingresa los datos que encuentras en el documento. <br>
-                De esta forma será más sencillo para el dueño poder encontrarlo.
+                Por favor, ingresa los datos que se encuentran en el documento. <br>
+                De esta forma, será más sencillo para el dueño poder encontrarlo.
             </p>
             <form [formGroup]="documentTypeForm">
                 <mat-form-field appearance="outline">
@@ -17,16 +17,20 @@
                     <input matInput type="text" formControlName="name">
                     <mat-error *ngIf="documentTypeForm.controls.name.hasError('required')">El nombre es obligatorio</mat-error>
                 </mat-form-field>
-                <div>
-                    <button mat-button matStepperNext color="accent">Siguiente</button>
+                <div fxLayout="row" fxLayoutAlign="space-between center">
+                    <a routerLink="/document/found" mat-button aria-label="Back">
+                        Atrás
+                    </a>
+                    <button mat-button matStepperNext color="primary">Siguiente</button>
                 </div>
             </form>
         </mat-step>
         <mat-step>
             <h2>¡Muchas gracias!</h2>
             <p>You are now done.</p>
-            <div>
+            <div fxLayout="row" fxLayoutAlign="space-between center">
                 <button mat-button matStepperPrevious>Back</button>
+                <button mat-raised-button color="primary" (click)="onSubmit()">Enviar</button>
             </div>
         </mat-step>
     </mat-horizontal-stepper>

@@ -3,12 +3,14 @@ import { CommonModule } from '@angular/common'
 
 import { MaterialModule } from './../material/material.module'
 import { PostRoutingModule } from './post-routing.module'
-import { PostListComponent } from './components/post-list/post-list.component'
+import { PostListComponent } from './components/post-list/post-list.component';
+import { PostFilterComponent } from './components/post-filter/post-filter.component'
 
 
 @NgModule({
     declarations: [
-        PostListComponent
+        PostListComponent,
+        PostFilterComponent
     ],
     imports: [
         CommonModule,
@@ -16,7 +18,8 @@ import { PostListComponent } from './components/post-list/post-list.component'
         MaterialModule
     ],
     exports: [
-        PostListComponent
+        PostListComponent,
+        PostFilterComponent
     ]
 })
 export class PostModule { }

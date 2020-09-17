@@ -7,7 +7,8 @@ import { MatExpansionModule } from '@angular/material/expansion'
 import { MatIconModule } from '@angular/material/icon'
 import { MatFormFieldModule } from '@angular/material/form-field' 
 import { MatInputModule } from '@angular/material/input'
-import { MatStepperModule } from '@angular/material/stepper' 
+import { MatStepperModule } from '@angular/material/stepper'
+import { MatChipsModule } from '@angular/material/chips'
 
 @NgModule({
     declarations: [],
@@ -19,7 +20,8 @@ import { MatStepperModule } from '@angular/material/stepper'
         MatIconModule,
         MatFormFieldModule,
         MatInputModule,
-        MatStepperModule
+        MatStepperModule,
+        MatChipsModule
     ],
     exports: [
         MatToolbarModule,
@@ -28,7 +30,8 @@ import { MatStepperModule } from '@angular/material/stepper'
         MatIconModule,
         MatInputModule,
         MatFormFieldModule,
-        MatStepperModule
+        MatStepperModule,
+        MatChipsModule
     ]
 })
 
