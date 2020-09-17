@@ -1,0 +1,8 @@
+@mixin bg($theme) {
+    $config: mat-get-color-config($theme);
+    $primary: map-get($config, primary);
+
+    .bg-primary {
+        background-color: mat-color($primary);;
+    }
+}

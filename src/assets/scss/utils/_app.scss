@@ -1,0 +1,6 @@
+@mixin app($theme) {
+    .fullscreen {
+        padding: 16px;
+        height: calc(100% - 32px);
+    }
+}
