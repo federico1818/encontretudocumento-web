@@ -7,11 +7,16 @@ import { PostListComponent } from './components/post-list/post-list.component'
 
 
 @NgModule({
-    declarations: [PostListComponent],
+    declarations: [
+        PostListComponent
+    ],
     imports: [
         CommonModule,
         PostRoutingModule,
         MaterialModule
+    ],
+    exports: [
+        PostListComponent
     ]
 })
 export class PostModule { }

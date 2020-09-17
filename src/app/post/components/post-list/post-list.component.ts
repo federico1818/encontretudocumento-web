@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core'
-import { from, Observable } from 'rxjs'
+import { Observable } from 'rxjs'
 
-import { PostService } from '../../services/post.service'
+import { PostService } from 'src/app/post/services/post.service'
 
 @Component({
     selector: 'app-post-list',
@@ -18,7 +18,6 @@ export class PostListComponent implements OnInit {
     
     ngOnInit(): void {
         this.posts = this.postService.posts
-        this.postService.all()
     }
 
 }
