@@ -9,6 +9,7 @@ import { MatFormFieldModule } from '@angular/material/form-field'
 import { MatInputModule } from '@angular/material/input'
 import { MatStepperModule } from '@angular/material/stepper'
 import { MatChipsModule } from '@angular/material/chips'
+import { MatButtonToggleModule } from '@angular/material/button-toggle' 
 
 @NgModule({
     declarations: [],
@@ -21,7 +22,8 @@ import { MatChipsModule } from '@angular/material/chips'
         MatFormFieldModule,
         MatInputModule,
         MatStepperModule,
-        MatChipsModule
+        MatChipsModule,
+        MatButtonToggleModule
     ],
     exports: [
         MatToolbarModule,
@@ -31,7 +33,8 @@ import { MatChipsModule } from '@angular/material/chips'
         MatInputModule,
         MatFormFieldModule,
         MatStepperModule,
-        MatChipsModule
+        MatChipsModule,
+        MatButtonToggleModule
     ]
 })
 

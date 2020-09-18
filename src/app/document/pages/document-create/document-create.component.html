@@ -1,27 +1,38 @@
 <div class="page container">
     <mat-horizontal-stepper linear>
         <mat-step [stepControl]="documentTypeForm">
+            <h2>Selecciona qué tipo de documento encontraste</h2>
+            <form [formGroup]="documentTypeForm">
+                <mat-button-toggle-group (change)="onGroupChange($event)">
+                    <mat-button-toggle value="1">DNI</mat-button-toggle>
+                    <mat-button-toggle value="2">Pasaporte</mat-button-toggle>
+                </mat-button-toggle-group>
+                <div fxLayout="row" fxLayoutAlign="space-between center">
+                    <a routerLink="/document/found" mat-button aria-label="Back">Atrás</a>
+                    <button mat-button matStepperNext color="primary">Siguiente</button>
+                </div>
+            </form>
+        </mat-step>
+        <mat-step [stepControl]="documentForm">
             <h2>Ingresa los datos del documento</h2>
             <p>
                 Por favor, ingresa los datos que se encuentran en el documento. <br>
                 De esta forma, será más sencillo para el dueño poder encontrarlo.
             </p>
-            <form [formGroup]="documentTypeForm">
+            <form [formGroup]="documentForm">
                 <mat-form-field appearance="outline">
                     <mat-label>Número</mat-label>
                     <input matInput type="text" formControlName="number">
-                    <mat-error *ngIf="documentTypeForm.controls.number.hasError('required')">El número es obligatorio</mat-error>
+                    <mat-error *ngIf="documentForm.controls.number.hasError('required')">El número es obligatorio</mat-error>
                 </mat-form-field>
                 <mat-form-field appearance="outline">
                     <mat-label>Nombre completo</mat-label>
                     <input matInput type="text" formControlName="name">
-                    <mat-error *ngIf="documentTypeForm.controls.name.hasError('required')">El nombre es obligatorio</mat-error>
+                    <mat-error *ngIf="documentForm.controls.name.hasError('required')">El nombre es obligatorio</mat-error>
                 </mat-form-field>
                 <div fxLayout="row" fxLayoutAlign="space-between center">
-                    <a routerLink="/document/found" mat-button aria-label="Back">
-                        Atrás
-                    </a>
-                    <button mat-button matStepperNext color="primary">Siguiente</button>
+                    <button mat-button matStepperPrevious type="button">Atrás</button>
+                    <button mat-button matStepperNext color="primary" type="submit">Siguiente</button>
                 </div>
             </form>
         </mat-step>
