@@ -1,0 +1,26 @@
+@mixin mat-chip($theme) {
+    $config: mat-get-color-config($theme);
+    $primary: map-get($config, primary);
+
+    .mat-chip {
+        font-size: 13px;
+    }
+
+    .mat-chip.mat-standard-chip {
+        background-color: transparent;
+        border: 1px solid mat-color($primary, lighter);
+    }
+    
+    .mat-chip.mat-standard-chip.mat-chip-selected.mat-primary {
+        border-color: mat-color($primary);
+    }
+    
+    .mat-chip.mat-standard-chip::after {
+        background-color: mat-color($primary);
+    }
+
+    .mat-standard-chip:hover::after {
+        opacity: .2;
+    }
+    
+}
