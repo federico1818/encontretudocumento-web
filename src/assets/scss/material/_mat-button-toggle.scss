@@ -1,0 +1,34 @@
+@mixin mat-button-toggle($theme) {
+    $config: mat-get-color-config($theme);
+    $primary: map-get($config, primary);
+
+    .mat-button-toggle-group-appearance-standard {
+        border: 0;
+    }
+
+    .mat-button-toggle {
+        margin: 8px;
+    }
+
+    .mat-button-toggle-appearance-standard {
+        border: 1px solid mat-color($primary, lighter);
+        border-radius: 4px;
+    }
+
+    .mat-button-toggle-group-appearance-standard .mat-button-toggle + .mat-button-toggle {
+        border-left: 1px solid mat-color($primary, lighter);
+    }
+
+    .mat-button-toggle-checked.mat-button-toggle-appearance-standard {
+        color: mat-color($primary, 'main-contrast');
+    }
+
+    .mat-button-toggle-appearance-standard .mat-button-toggle-focus-overlay {
+        background-color: mat-color($primary);
+    }
+    
+    .mat-button-toggle-checked {
+        background-color: mat-color($primary);
+    }
+    
+}
