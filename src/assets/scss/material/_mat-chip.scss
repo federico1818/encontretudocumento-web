@@ -5,10 +5,11 @@
     .mat-chip {
         font-size: 13px;
     }
-
+    
     .mat-chip.mat-standard-chip {
         background-color: transparent;
         border: 1px solid mat-color($primary, lighter);
+        padding: 8px;
     }
     
     .mat-chip.mat-standard-chip.mat-chip-selected.mat-primary {

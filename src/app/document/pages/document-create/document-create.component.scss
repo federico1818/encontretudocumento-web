@@ -1,0 +1,24 @@
+p {
+    margin-bottom: 24px;
+}
+
+.container {
+    padding: 8px;
+}
+
+.mat-stepper-horizontal {
+    height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    position: relative;
+}
+
+::ng-deep .mat-horizontal-stepper-content {
+    height: 100%;
+    position: relative;
+}
+
+.mat-toolbar.mat-primary {
+    bottom: 0;
+    position: absolute;
+}

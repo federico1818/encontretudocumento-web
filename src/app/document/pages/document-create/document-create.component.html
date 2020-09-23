@@ -1,5 +1,5 @@
 <div class="page container">
-    <mat-horizontal-stepper linear>
+    <mat-horizontal-stepper linear class="mat-horizontal-stepper-document">
         <mat-step [stepControl]="documentTypeForm">
             <h2>Selecciona qué tipo de documento encontraste</h2>
             <form [formGroup]="documentTypeForm">
@@ -7,10 +7,12 @@
                     <mat-button-toggle value="1">DNI</mat-button-toggle>
                     <mat-button-toggle value="2">Pasaporte</mat-button-toggle>
                 </mat-button-toggle-group>
-                <div fxLayout="row" fxLayoutAlign="space-between center">
+
+                <mat-toolbar color="primary" fxLayout="row" fxLayoutAlign="space-between center">
                     <a routerLink="/document/found" mat-button aria-label="Back">Atrás</a>
-                    <button mat-button matStepperNext color="primary">Siguiente</button>
-                </div>
+                    <button mat-button matStepperNext>Siguiente</button>
+                </mat-toolbar>
+               
             </form>
         </mat-step>
         <mat-step [stepControl]="documentForm">
@@ -30,10 +32,34 @@
                     <input matInput type="text" formControlName="name">
                     <mat-error *ngIf="documentForm.controls.name.hasError('required')">El nombre es obligatorio</mat-error>
                 </mat-form-field>
-                <div fxLayout="row" fxLayoutAlign="space-between center">
+
+                <mat-toolbar color="primary" fxLayout="row" fxLayoutAlign="space-between center">
                     <button mat-button matStepperPrevious type="button">Atrás</button>
-                    <button mat-button matStepperNext color="primary" type="submit">Siguiente</button>
-                </div>
+                    <button mat-button matStepperNext type="submit">Siguiente</button>
+                </mat-toolbar>
+            </form>
+        </mat-step>
+        <mat-step [stepControl]="documentContactForm">
+            <h2>Ingresa tus datos de contacto</h2>
+            <p>
+                Es necesario que nos brides una dirección de email para poder ponerte en contacto con el dueño cuando reclame su documento. 
+            </p>
+            <form [formGroup]="documentContactForm">
+                <mat-form-field appearance="outline">
+                    <mat-label>Nombre</mat-label>
+                    <input matInput type="text" formControlName="name">
+                    <mat-error *ngIf="documentContactForm.controls.name.hasError('required')">El nombre es obligatorio</mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Email</mat-label>
+                    <input matInput type="email" formControlName="email">
+                    <mat-error *ngIf="documentContactForm.controls.email.hasError('required')">El email es obligatorio</mat-error>
+                    <mat-error *ngIf="documentContactForm.controls.email.hasError('email')">Debes ingresar un email válido</mat-error>
+                </mat-form-field>
+                <mat-toolbar color="primary" fxLayout="row" fxLayoutAlign="space-between center">
+                    <button mat-button matStepperPrevious type="button">Atrás</button>
+                    <button mat-button matStepperNext type="submit">Siguiente</button>
+                </mat-toolbar>
             </form>
         </mat-step>
         <mat-step>
@@ -45,4 +71,6 @@
             </div>
         </mat-step>
     </mat-horizontal-stepper>
+
+    
 </div>

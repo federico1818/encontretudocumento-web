@@ -6,4 +6,9 @@
         background-color: transparent;
         color: mat-color($primary, darker);
     }
+    
+    .mat-toolbar.mat-primary {
+        border-radius: 8px;
+    }
+
 }

@@ -20,6 +20,11 @@ export class DocumentCreateComponent implements OnInit {
         number: ['', [Validators.required]],
         name: ['', [Validators.required]]
     })
+    
+    public documentContactForm = this.fb.group({
+        name: ['', [Validators.required]],
+        email: ['', [Validators.required, Validators.email]]
+    })
 
     constructor(
         protected fb: FormBuilder,
