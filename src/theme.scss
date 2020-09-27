@@ -1,6 +1,7 @@
 @import '~@angular/material/theming';
 @import './assets/scss/utils/app';
 @import './assets/scss/utils/bg';
+@import './assets/scss/utils/color';
 @import './assets/scss/utils/text';
 @import './assets/scss/material/mat-button-toggle';
 @import './assets/scss/material/mat-chip';
@@ -50,6 +51,7 @@ $app-theme: mat-light-theme((
 @include angular-material-theme($app-theme);
 @include app($app-theme);
 @include bg($app-theme);
+@include color($app-theme);
 @include text($app-theme);
 @include mat-button-toggle($app-theme);
 @include mat-chip($app-theme);

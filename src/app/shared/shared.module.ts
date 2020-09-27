@@ -5,12 +5,14 @@ import { FlexLayoutModule } from '@angular/flex-layout'
 
 import { MaterialModule } from './../material/material.module'
 import { HeaderComponent } from './header/header.component'
-import { FooterComponent } from './footer/footer.component'
+import { FooterComponent } from './footer/footer.component';
+import { InputFileComponent } from './input-file/input-file.component'
 
 @NgModule({
     declarations: [
         HeaderComponent,
-        FooterComponent
+        FooterComponent,
+        InputFileComponent
     ],
     imports: [
         CommonModule,
@@ -20,7 +22,8 @@ import { FooterComponent } from './footer/footer.component'
     ],
     exports: [
         HeaderComponent,
-        FooterComponent
+        FooterComponent,
+        InputFileComponent
     ]
 })
 
