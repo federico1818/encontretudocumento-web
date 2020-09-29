@@ -13,4 +13,12 @@ export class InputFileComponent implements OnInit {
     ngOnInit(): void {
     }
 
+    public onchange(event: Event): void {
+        if(this.hasFile(event))
+            console.log('Lalala')
+    }
+
+    protected hasFile(event: Event) {
+        return event.target['files'] && event.target['files'][0]
+    }
 }
