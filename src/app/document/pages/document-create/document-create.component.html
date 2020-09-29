@@ -39,10 +39,24 @@
                 </mat-toolbar>
             </form>
         </mat-step>
+        <mat-step [stepControl]="documentForm">
+            <h2>Subí una imagen del documento</h2>
+            <p>
+                Es recomendable que subas una imagen del documento encontrado
+                donde pueda verse con claridad el número y la foto de la persona.
+            </p>
+            <form [formGroup]="documentImageForm">
+                <app-input-file></app-input-file>
+                <mat-toolbar color="primary" fxLayout="row" fxLayoutAlign="space-between center">
+                    <button mat-button matStepperPrevious type="button">Atrás</button>
+                    <button mat-button matStepperNext type="submit">Siguiente</button>
+                </mat-toolbar>
+            </form>
+        </mat-step>
         <mat-step [stepControl]="documentContactForm">
             <h2>Ingresa tus datos de contacto</h2>
             <p>
-                Es necesario que nos brides una dirección de email para poder ponerte en contacto con el dueño cuando reclame su documento. 
+                Es necesario que nos brides una dirección de email para ponerte en contacto con el dueño cuando reclame su documento. 
             </p>
             <form [formGroup]="documentContactForm">
                 <mat-form-field appearance="outline">
@@ -55,6 +69,10 @@
                     <input matInput type="email" formControlName="email">
                     <mat-error *ngIf="documentContactForm.controls.email.hasError('required')">El email es obligatorio</mat-error>
                     <mat-error *ngIf="documentContactForm.controls.email.hasError('email')">Debes ingresar un email válido</mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Extra</mat-label>
+                    <textarea matInput formControlName="extra"></textarea>
                 </mat-form-field>
                 <mat-toolbar color="primary" fxLayout="row" fxLayoutAlign="space-between center">
                     <button mat-button matStepperPrevious type="button">Atrás</button>
