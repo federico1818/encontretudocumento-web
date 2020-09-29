@@ -1,8 +1,13 @@
 <label>
-    <div class="container" fxLayout="column" fxLayoutAlign="center center">
-        <mat-icon color="primary">cloud_upload</mat-icon>
-        <h3>Puedes arrastrar la imagen</h3>
-        <p>o seleccionar un archivo</p>
+    <div class="container">
+        <div fxLayout="column" fxLayoutAlign="center center" *ngIf="!imageUploaded">
+            <mat-icon color="primary">cloud_upload</mat-icon>
+            <h3>Puedes arrastrar la imagen</h3>
+            <p>o seleccionar un archivo</p>
+        </div>
+        <picture fxLayout="column" fxLayoutAlign="center center" *ngIf="imageUploaded">
+            <img [src]="imgSrc" alt="document">
+        </picture>
     </div>
     <input type="file" (change)="onchange($event)">
 </label>

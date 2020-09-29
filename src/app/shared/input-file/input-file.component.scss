@@ -3,6 +3,10 @@ input[type="file"] {
     display: none;
 }
 
+picture {
+    max-height: 320px;
+}
+
 .mat-icon {
     font-size: 72px;
     height: 72px;
