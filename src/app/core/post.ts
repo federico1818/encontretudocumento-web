@@ -1,4 +1,5 @@
 export class Post {
+    public id: number
     public number: string
     public type: any
     public image: string

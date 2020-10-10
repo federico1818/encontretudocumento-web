@@ -15,11 +15,13 @@ export class PostService {
 
     public all(): void {
         let p = new Post
+        p.id = 1
         p.number = '35112252'
         p.type = 'DNI'
         p.image = 'document.jpg'
         
         let p2 = new Post
+        p2.id = 2
         p2.number = 'xvvcs12312'
         p2.type = 'Pasaporte'
         p2.image = 'document-2.jpg'

@@ -7,15 +7,17 @@ import { MaterialModule } from 'src/app/material/material.module'
 import { SharedModule } from 'src/app/shared/shared.module'
 import { DocumentRoutingModule } from './document-routing.module'
 import { DocumentCreateComponent } from './pages/document-create/document-create.component'
-import { DocumentFormComponent } from './components/document-form/document-form.component';
+import { DocumentFormComponent } from './components/document-form/document-form.component'
 import { DocumentFoundComponent } from './pages/document-found/document-found.component'
+import { DocumentRequestComponent } from './pages/document-request/document-request.component'
 
 
 @NgModule({
     declarations: [
         DocumentCreateComponent,
         DocumentFormComponent,
-        DocumentFoundComponent
+        DocumentFoundComponent,
+        DocumentRequestComponent
     ],
     imports: [
         CommonModule,
