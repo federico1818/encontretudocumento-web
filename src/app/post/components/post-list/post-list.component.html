@@ -5,6 +5,11 @@
     </mat-expansion-panel-header>
   
     <ng-template matExpansionPanelContent>
-        Some deferred content
+        <img src="{{ post.imageSrc }}" alt="{{ post.number }}">
+
+        <div class="mat-expansion-panel-buttons" fxLayout="row" fxLayoutAlign="flex-end stretch">
+            <button mat-button color="primary">Ver más</button>
+            <button mat-raised-button color="primary">Es mío</button>
+        </div>
     </ng-template>
 </mat-expansion-panel>

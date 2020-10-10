@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common'
+import { FlexLayoutModule } from '@angular/flex-layout'
 
 import { MaterialModule } from './../material/material.module'
 import { PostRoutingModule } from './post-routing.module'
@@ -14,6 +15,7 @@ import { PostFilterComponent } from './components/post-filter/post-filter.compon
     ],
     imports: [
         CommonModule,
+        FlexLayoutModule,
         PostRoutingModule,
         MaterialModule
     ],

@@ -17,7 +17,13 @@ export class PostService {
         let p = new Post
         p.number = '35112252'
         p.type = 'DNI'
-        this._posts.next([p, p, p, p])
+        p.image = 'document.jpg'
+        
+        let p2 = new Post
+        p2.number = 'xvvcs12312'
+        p2.type = 'Pasaporte'
+        p2.image = 'document-2.jpg'
+        this._posts.next([p, p2, p, p2])
     }
 
     public save(post: Post): void {
