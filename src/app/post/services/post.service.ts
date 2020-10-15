@@ -33,4 +33,14 @@ export class PostService {
         posts.unshift(post)
         this._posts.next(posts)
     }
+
+    public find(id: number): Post {
+        let p2 = new Post
+        p2.id = 2
+        p2.number = 'xvvcs12312'
+        p2.type = 'Pasaporte'
+        p2.image = 'document-2.jpg'
+
+        return p2
+    }
 }

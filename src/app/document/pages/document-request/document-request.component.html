@@ -1,12 +1,14 @@
-<div class="page container">
+<div class="page bg-primary container">
     <picture fxLayout="row" fxLayoutAlign="center stretch">
-        <img src="assets/img/professional_card.svg" alt="Document found">
+        <img src="assets/img/happy_announcement.svg" alt="Document request">
     </picture>
     
-    <h2 class="text-center">¿Encontraste un documento?</h2>
+    <h2 class="text-center">¡Enhorabuena!</h2>
 
     <p class="text-justify">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora totam facilis animi inventore voluptatem doloribus incidunt labore rem quo alias, dolorum quod obcaecati. Dicta repellat nulla, laudantium voluptas porro voluptatum?
+        Has encontrado tu {{ post.type }} con número: <strong>{{ post.number }}</strong> <br>
+        Revisa que los datos coincidan así avanzamos con el proceso 
+        para que puedas recuperarlo lo antes posible.
     </p>
 
     <div fxLayout="row" fxLayoutAlign="space-between center">
