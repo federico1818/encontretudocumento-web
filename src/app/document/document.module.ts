@@ -9,7 +9,8 @@ import { DocumentRoutingModule } from './document-routing.module'
 import { DocumentCreateComponent } from './pages/document-create/document-create.component'
 import { DocumentFormComponent } from './components/document-form/document-form.component'
 import { DocumentFoundComponent } from './pages/document-found/document-found.component'
-import { DocumentRequestComponent } from './pages/document-request/document-request.component'
+import { DocumentRequestComponent } from './pages/document-request/document-request.component';
+import { DocumentRequestCreateComponent } from './pages/document-request-create/document-request-create.component'
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { DocumentRequestComponent } from './pages/document-request/document-requ
         DocumentCreateComponent,
         DocumentFormComponent,
         DocumentFoundComponent,
-        DocumentRequestComponent
+        DocumentRequestComponent,
+        DocumentRequestCreateComponent
     ],
     imports: [
         CommonModule,
