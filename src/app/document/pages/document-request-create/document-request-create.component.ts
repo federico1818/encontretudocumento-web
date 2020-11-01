@@ -31,4 +31,8 @@ export class DocumentRequestCreateComponent implements OnInit {
         })
     }
 
+    public onSubmit(): void {
+        
+    }
+
 }

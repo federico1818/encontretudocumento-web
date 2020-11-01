@@ -16,7 +16,10 @@ $primary: (
     main: #75aadb,
     lighter: #EEF5FB,
     darker: #457FC4,
-    200: #75aadb,
+    50: #EEF5FB,
+    200: #bad5ed,
+    500: #75aadb,
+    900: #457FC4,
     contrast : (
         main: #FFF,
         lighter: #FFF,
@@ -28,7 +31,7 @@ $accent: (
     main: #fcbf49,
     lighter: #feecc8,
     darker: #fba931,
-    200: #fcbf49,
+    500: #fcbf49,
     contrast : (
         main: #FFF,
         lighter: #FFF,

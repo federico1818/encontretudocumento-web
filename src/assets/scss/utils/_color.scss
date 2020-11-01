@@ -4,6 +4,7 @@
 
     :root {
         --primary: #{ mat-color($primary) };
+        --primary-200: #{ mat-color($primary, 200) };
         --primary-lighter: #{ mat-color($primary, lighter) };
     }
     
