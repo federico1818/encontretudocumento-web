@@ -1,4 +1,10 @@
 @mixin text($theme) {
+    $foreground: map-get($theme, foreground);
+
+    :root {
+        --text-secondary: #{ mat-color($foreground, secondary-text) };
+    }
+
     .text-center {
         text-align: center;
     }

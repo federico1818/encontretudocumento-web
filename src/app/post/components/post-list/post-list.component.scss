@@ -9,3 +9,17 @@
 .mat-expansion-panel-buttons {
     margin-top: 24px;
 }
+
+.mat-expansion-panel-header-content {
+    display: grid;
+    grid-gap: 2px;
+}
+
+.post-type {
+    color: var(--text-secondary);
+    font-size: 0.75rem;
+}
+
+.post-number {
+    font-size: 1rem;
+}

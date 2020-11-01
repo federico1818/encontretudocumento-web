@@ -10,6 +10,10 @@
     .mat-expansion-panel:not(.mat-expanded) .mat-expansion-panel-header:hover:not([aria-disabled="true"]) {
         background-color: mat-color($primary, lighter);
     }
+
+    .mat-expansion-panel-header {
+        height: 54px;
+    } 
     
     .mat-expansion-indicator::after {
         color: mat-color($primary);

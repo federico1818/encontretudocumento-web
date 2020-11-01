@@ -42,8 +42,8 @@
         <mat-step [stepControl]="documentForm">
             <h2>Subí una imagen del documento</h2>
             <p>
-                Es recomendable que subas una imagen del documento encontrado
-                donde pueda verse con claridad el número y la foto de la persona.
+                Asegúrate que se vean con claridad el número y/o el rostro de lo persona
+                antes de enviar la foto.
             </p>
             <form [formGroup]="documentImageForm">
                 <app-input-file></app-input-file>
@@ -56,7 +56,7 @@
         <mat-step [stepControl]="documentContactForm">
             <h2>Ingresa tus datos de contacto</h2>
             <p>
-                Es necesario que nos brides una dirección de email para ponerte en contacto con el dueño cuando reclame su documento. 
+                Es necesario que nos brides una dirección de email donde te enviaremos una notificación al momento que el dueño reclame su documento.  
             </p>
             <form [formGroup]="documentContactForm">
                 <mat-form-field appearance="outline">
