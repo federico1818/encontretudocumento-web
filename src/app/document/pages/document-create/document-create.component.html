@@ -1,5 +1,5 @@
 <div class="page container">
-    <mat-horizontal-stepper linear class="mat-horizontal-stepper-document">
+    <mat-horizontal-stepper linear>
         <mat-step [stepControl]="documentTypeForm">
             <h2>Selecciona qué tipo de documento encontraste</h2>
             <form [formGroup]="documentTypeForm">
@@ -42,7 +42,7 @@
         <mat-step [stepControl]="documentForm">
             <h2>Subí una imagen del documento</h2>
             <p>
-                Asegúrate que se vean con claridad el número y/o el rostro de lo persona
+                Asegúrate que se vean con claridad el número y/o el rostro de la persona
                 antes de enviar la foto.
             </p>
             <form [formGroup]="documentImageForm">

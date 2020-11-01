@@ -1,0 +1,47 @@
+<div class="page container">
+    <mat-horizontal-stepper linear>
+        <mat-step [stepControl]="requestContactForm">
+            <h2>Ingresa tus datos de contacto</h2>
+            <p>
+                Es necesario que nos brides una dirección de correo válida para enviarte
+                los datos de la persona que encontró tu documento.
+                (Si el documento no es tuyo y es de una persona cercana, por favor acláralo en el mensaje)
+            </p>
+            <form [formGroup]="requestContactForm">
+                <mat-form-field appearance="outline">
+                    <mat-label>Nombre</mat-label>
+                    <input matInput type="text" formControlName="name">
+                    <mat-error *ngIf="requestContactForm.controls.name.hasError('required')">El nombre es obligatorio</mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Email</mat-label>
+                    <input matInput type="email" formControlName="email">
+                    <mat-error *ngIf="requestContactForm.controls.email.hasError('required')">El email es obligatorio</mat-error>
+                    <mat-error *ngIf="requestContactForm.controls.email.hasError('email')">Debes ingresar un email válido</mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Mensaje</mat-label>
+                    <textarea matInput formControlName="message"></textarea>
+                </mat-form-field>
+                <mat-toolbar color="primary" fxLayout="row" fxLayoutAlign="space-between center">
+                    <a routerLink="../" mat-button aria-label="Back">Atrás</a>
+                    <button mat-button matStepperNext type="submit">Siguiente</button>
+                </mat-toolbar>
+            </form>
+        </mat-step>
+        <mat-step>
+            <h2>Resumen</h2>
+            <p>
+                {{ requestContactForm.get('name').value }}, te pondremos en contacto con la persona que ha encontrado el <strong>{{ post.type }} {{ post.number }}</strong> enviándote sus datos 
+                a la dirección de correo que nos proporcionaste: <strong>{{ requestContactForm.get('email').value }}</strong>
+            </p>
+            <p>
+                Revisa si los datos son válidos (si no es así, puedes volver atrás para editarlos).
+            </p>
+            <div fxLayout="row" fxLayoutAlign="space-between center">
+                <button mat-button matStepperPrevious>Back</button>
+                <button mat-raised-button color="primary" (click)="onSubmit()">Enviar</button>
+            </div>
+        </mat-step>
+    </mat-horizontal-stepper>
+</div>
