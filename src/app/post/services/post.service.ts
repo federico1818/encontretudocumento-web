@@ -31,7 +31,9 @@ export class PostService {
     public save(post: Post): void {
         let posts: Post[] = this._posts.getValue()
         posts.unshift(post)
-        this._posts.next(posts)
+        setTimeout(() => {
+            this._posts.next(posts)
+        }, 2000)
     }
 
     public find(id: number): Post {
