@@ -83,20 +83,32 @@
         </mat-step>
         <mat-step>
             <h2>Finalizar</h2>
-            <p>Revisa que los datos ingresados estén correctos.</p>
-            <h3>Documento encontrado</h3>
-            <dl>
-                <dt>DNI </dt>
-                <dd>{{ documentForm.get('number').value }}</dd>
-                
-                <dt>Nombre</dt>
-                <dd>{{ documentForm.get('name').value }}</dd>
-            </dl>
-            <h3>Datos de contacto</h3>
-            <div fxLayout="row" fxLayoutAlign="space-between center">
-                <button mat-button matStepperPrevious>Atrás</button>
-                <button mat-raised-button color="primary" (click)="onSubmit()">Enviar</button>
+            <p>Revisa que los datos ingresados estén correctos. Si es así, puedes enviar la información.</p>
+            <div class="box">
+                <h3>Documento encontrado</h3>
+                <dl>
+                    <dt>DNI </dt>
+                    <dd>{{ documentForm.get('number').value }}</dd>
+                    
+                    <dt>Nombre</dt>
+                    <dd>{{ documentForm.get('name').value }}</dd>
+                </dl>
+                <h3>Datos de contacto</h3>
+                <dl>
+                    <dt>Nombre </dt>
+                    <dd>{{ documentContactForm.get('name').value }}</dd>
+                    
+                    <dt>Email</dt>
+                    <dd>{{ documentContactForm.get('email').value }}</dd>
+                    
+                    <dt>Extra</dt>
+                    <dd>{{ documentContactForm.get('extra').value }}</dd>
+                </dl>
             </div>
+            <mat-toolbar color="primary" fxLayout="row" fxLayoutAlign="space-between center">
+                <button mat-button matStepperPrevious type="button">Atrás</button>
+                <button mat-raised-button color="primary" (click)="onSubmit()">Enviar</button>
+            </mat-toolbar>
         </mat-step>
     </mat-horizontal-stepper>
 

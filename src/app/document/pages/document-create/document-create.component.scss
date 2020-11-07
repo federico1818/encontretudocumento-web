@@ -6,6 +6,24 @@ textarea {
     height: 128px;
 }
 
+dt {
+    color: var(--text-secondary);
+    font-size: .75rem;
+}
+
+dd {
+    font-size: .9rem;
+}
+
+h3 {
+    font-weight: 500;
+    margin-top: 32px;
+}
+
+h3:first-child {
+    margin-top: inherit;
+}
+
 .container {
     padding: 8px;
 }
@@ -15,6 +33,12 @@ textarea {
     display: grid;
     grid-template-rows: auto 1fr;
     position: relative;
+}
+
+.box {
+    border: 1px solid var(--primary-lighter);
+    border-radius: 8px;
+    padding: 16px;
 }
 
 ::ng-deep .mat-horizontal-stepper-content {
