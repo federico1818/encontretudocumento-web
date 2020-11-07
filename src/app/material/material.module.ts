@@ -9,7 +9,9 @@ import { MatFormFieldModule } from '@angular/material/form-field'
 import { MatInputModule } from '@angular/material/input'
 import { MatStepperModule } from '@angular/material/stepper'
 import { MatChipsModule } from '@angular/material/chips'
-import { MatButtonToggleModule } from '@angular/material/button-toggle' 
+import { MatButtonToggleModule } from '@angular/material/button-toggle'
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner'
+import { MatProgressBarModule } from '@angular/material/progress-bar'
 
 @NgModule({
     declarations: [],
@@ -23,7 +25,9 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle'
         MatInputModule,
         MatStepperModule,
         MatChipsModule,
-        MatButtonToggleModule
+        MatButtonToggleModule,
+        MatProgressSpinnerModule,
+        MatProgressBarModule
     ],
     exports: [
         MatToolbarModule,
@@ -34,7 +38,9 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle'
         MatFormFieldModule,
         MatStepperModule,
         MatChipsModule,
-        MatButtonToggleModule
+        MatButtonToggleModule,
+        MatProgressSpinnerModule,
+        MatProgressBarModule
     ]
 })
 

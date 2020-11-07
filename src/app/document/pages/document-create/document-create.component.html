@@ -107,10 +107,10 @@
             </div>
             <mat-toolbar color="primary" fxLayout="row" fxLayoutAlign="space-between center">
                 <button mat-button matStepperPrevious type="button">Atrás</button>
-                <button mat-raised-button color="primary" (click)="onSubmit()">Enviar</button>
+                <button mat-raised-button color="primary" (click)="onSubmit()" [disabled]="sending">Enviar</button>
             </mat-toolbar>
         </mat-step>
     </mat-horizontal-stepper>
-
-    
 </div>
+
+<app-progress></app-progress>

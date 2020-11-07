@@ -12,6 +12,8 @@ import { PostService } from 'src/app/post/services/post.service'
 })
 
 export class DocumentCreateComponent implements OnInit {
+    public sending: boolean
+
     public documentTypeForm = this.fb.group({
         type_id: ['', [Validators.required]]
     })
@@ -41,10 +43,14 @@ export class DocumentCreateComponent implements OnInit {
     }
 
     public onSubmit(): void {
+        this.sending = true
         let p = new Post
         p.number = '32444555'
         p.type = 'DNI'
         this.postService.save(p)
+        setTimeout(() => {
+            this.sending = false
+        }, 2000)
     }
 
     public onGroupChange(event: MatButtonToggleChange): void {

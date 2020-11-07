@@ -1,0 +1,25 @@
+.progress {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 8px;
+    border: 1px solid var(--primary);
+    padding: 8px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--background);
+}
+
+img {
+    margin-bottom: 32px;
+    width: 70%;
+}
+
+.message {
+    margin-top: 8px
+}

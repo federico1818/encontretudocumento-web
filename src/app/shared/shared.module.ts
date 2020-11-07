@@ -7,12 +7,14 @@ import { MaterialModule } from './../material/material.module'
 import { HeaderComponent } from './header/header.component'
 import { FooterComponent } from './footer/footer.component';
 import { InputFileComponent } from './input-file/input-file.component'
+import { ProgressComponent } from './progress/progress.component'
 
 @NgModule({
     declarations: [
         HeaderComponent,
         FooterComponent,
-        InputFileComponent
+        InputFileComponent,
+        ProgressComponent
     ],
     imports: [
         CommonModule,
@@ -23,7 +25,8 @@ import { InputFileComponent } from './input-file/input-file.component'
     exports: [
         HeaderComponent,
         FooterComponent,
-        InputFileComponent
+        InputFileComponent,
+        ProgressComponent
     ]
 })
 
